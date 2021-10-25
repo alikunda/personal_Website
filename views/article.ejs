@@ -1,0 +1,76 @@
+<%- include('layouts/header.ejs') %>
+ <%- include('layouts/navigation.ejs') %>
+
+<!-- Material form contact -->
+<div
+class="card"
+style="
+  width: 6.5in;
+  height: 5in;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5in;
+  margin-top: 0.7in;
+  background-color: transparent;
+"
+>
+<h5 class="card-header info-color white-text text-center py-4">
+  <strong>Article Blog</strong>
+</h5>
+
+<!--Card content-->
+<div class="card-body px-lg-5 pt-0">
+  <!-- Form -->
+  <form class="text-center" style="color: #757575" action="/submitArticle" method="POST">
+    <div class="md-form mt-3">
+      <input
+        type="text"
+        id="materialContactFormName"
+        class="form-control"
+        placeholder="Name" name="name" required
+      />
+     
+    </div>
+    <!-- Name -->
+    <div class="md-form mt-4" style="margin-bottom: 40px;">
+      <input
+        type="text"
+        id="materialContactFormName"
+        class="form-control"
+        placeholder="Title" name="title" required
+      />
+     
+    </div>
+    
+
+    <!--Message-->
+    <div class="md-form">
+      <textarea
+        id="materialContactFormMessage"
+        class="form-control md-textarea"
+        rows="3"
+        placeholder="Content" name="content" required
+      ></textarea>
+      <label for="materialContactFormMessage">Message</label>
+    </div>
+
+    
+
+    <!-- Send button -->
+    <button
+      class="
+        btn btn-outline-info btn-rounded btn-block
+        z-depth-0
+        my-4
+        waves-effect
+      "
+      type="submit"
+    >
+      Submit article
+    </button>
+  </form>
+  <!-- Form -->
+</div>
+</div>
+<!-- Material form contact -->
+ <%- include('layouts/footer.ejs') %>

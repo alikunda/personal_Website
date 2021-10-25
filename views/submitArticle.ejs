@@ -1,0 +1,105 @@
+<%- include('layouts/header.ejs') %>
+
+<%- include('layouts/navigation.ejs') %>
+<!-- Material form contact -->
+<div
+class="card"
+style="
+  width: 6.5in;
+  height: 5in;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5in;
+  margin-top: 0.7in;
+  background-color: transparent;
+"
+>
+<h5 class="card-header info-color white-text text-center py-4">
+  <strong>Article BLog</strong>
+</h5>
+
+<!--Card content-->
+<div class="card-body px-lg-5 pt-0">
+  <!-- Form -->
+  <form class="text-center" style="color: #757575" action="/submitArticle" method="POST">
+    <!-- Name -->
+    <div class="md-form mt-3">
+      <input
+        type="text"
+        id="materialContactFormName"
+        class="form-control"
+        placeholder="Name" name="name" required
+      />
+     
+    </div>
+    <!-- Name -->
+    <div class="md-form mt-4" style="margin-bottom: 40px;">
+      <input
+        type="text"
+        id="materialContactFormName"
+        class="form-control"
+        placeholder="Title" name="title" required
+      />
+     
+    </div>
+      <!--Message-->
+      <div class="md-form">
+        <textarea
+          id="materialContactFormMessage"
+          class="form-control md-textarea"
+          rows="3"
+          placeholder="Content" name="content" required
+        ></textarea>
+        <label for="materialContactFormMessage">Message</label>
+      </div>
+    
+    <!-- Send button -->
+    <button
+      class="
+        btn btn-outline-info btn-rounded btn-block
+        z-depth-0
+        my-4
+        waves-effect
+      "
+      type="submit"
+    >
+      Submit article
+    </button>
+  </form>
+  <!-- Form -->
+</div>
+</div>
+<!-- Material form contact -->
+    
+<div class="container"style="text-align: center;">
+    <div class="col-md-12"style="margin-left: auto;margin-right: auto; border: 1px solid;margin-top: 3%;">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Title</th>
+        <th scope="col">Date</th>
+        <th scope="col">Content</th>
+      </tr>
+    </thead>
+    <tbody>
+
+
+ <% for (let a of articles){   %>
+      <tr>
+        <td scope="row">
+          <%= a.name %></td>
+          <td><%= a.title %></td>
+        <td><%= a.date %></td>
+        <td><%= a.content %></td>
+      </tr>
+   <% } %>
+   
+    
+    </tbody>
+  </table>
+</div>
+</div>
+
+
+<%- include('layouts/footer.ejs') %>

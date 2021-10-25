@@ -1,0 +1,163 @@
+<%- include('layouts/header.ejs') %>
+
+
+
+<%- include('layouts/navigation.ejs') %>
+<!-- Material form contact -->
+    <div
+      class="card"
+      style="
+        width: 6.5in;
+        height: 5.3in;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0.5in;
+        margin-top: 0.7in;
+        background-color: transparent;
+      "
+    >
+      <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Send message</strong>
+      </h5>
+
+      <!--Card content-->
+      <div class="card-body px-lg-5 pt-0">
+        <!-- Form -->
+        <form class="text-center" style="color: #757575" action="/submitContact" method="POST">
+          <!-- Name -->
+          <div class="md-form mt-3">
+            <input
+              type="text"
+              id="materialContactFormName"
+              class="form-control"
+              placeholder="First Name" name="fname" required
+            />
+            <label for="materialContactFormName">First Name</label>
+          </div>
+
+          
+              <div class="md-form mt-3">
+                <input
+                  type="text"
+                  id="materialContactFormName"
+                  class="form-control" placeholder="Last Name" name="lname" required
+                />
+                <label for="materialContactFormName"> Last Name</label>
+              </div>
+
+
+          <!-- E-mail -->
+          <div class="md-form">
+            <input
+              type="email"
+              id="materialContactFormEmail"
+              class="form-control"
+              placeholder="E-mail"
+              name="email"
+              required
+            />
+            <label for="materialContactFormEmail">E-mail</label>
+          </div>
+
+       <!-- subject -->
+       <div class="md-form">
+        <input
+          type="text"
+          id="materialContactFormSubject"
+          class="form-control"
+          name="subject"
+          required
+        />
+        <label for="materialContactFormEmail">Subject</label>
+      </div>
+
+          <!--Message-->
+          <div class="md-form">
+            <textarea
+              id="materialContactFormMessage"
+              class="form-control md-textarea"
+              rows="3"
+              placeholder="Message" name="comment" required
+            ></textarea>
+            <label for="materialContactFormMessage">Message</label>
+          </div>
+
+          
+
+          <!-- Send button -->
+          <button
+            class="
+              btn btn-outline-info btn-rounded btn-block
+              z-depth-0
+              my-4
+              waves-effect
+            "
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+        <!-- Form -->
+      </div>
+    </div>
+    <!-- Material form contact -->
+
+    <!--Google map-->
+
+    <h2 style="text-align: center;">Google maps</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14458.839486935618!2d-98.51768290731252!3d29.29701676904211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c57620df39603%3A0x6dd54079639010f1!2sTexas%20A%26M%20University-San%20Antonio!5e0!3m2!1sen!2sus!4v1626704061430!5m2!1sen!2sus" frameborder="0"
+    style="border:0; margin-left: 359px; margin-top: 20px;margin-bottom:25px;width: 6.6in;
+    height: 5in;" allowfullscreen></iframe>
+</div>
+
+<!--Google Maps-->
+
+    <!-- Footer -->
+    <footer class="page-footer font-small special-color-dark pt-4">
+      <!-- Footer Elements -->
+      <div class="container">
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item">
+            <a class="btn-floating btn-fb mx-1">
+              <i class="fab fa-facebook-f"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-tw mx-1">
+              <i class="fab fa-twitter"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-gplus mx-1">
+              <i class="fab fa-instagram"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-li mx-1">
+              <i class="fab fa-linkedin-in"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-dribbble mx-1">
+              <i class="fab fa-twitter"> </i>
+            </a>
+          </li>
+        </ul>
+        <!-- Social buttons -->
+      </div>
+      <!-- Footer Elements -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        © 2021 Copyright:
+        <a href="https://mdbootstrap.com/"> MohammedAli.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!--/Footer-->
+
+    <!-- End your project here-->
+  
+    <%- include('layouts/footer.ejs') %>
